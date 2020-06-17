@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace:该mapper.xml映射文件的 唯一标识 -->
+<mapper namespace="org.macross.mapper.Mapper">
+
+<!--    账户登录查询-->
+    <select id="queryUserByNameAndPwd" resultType="int" parameterType="User">
+        select count(*) from user where username=#{username} and userpassword=#{userpassword};
+    </select>
+
+    <select id="queryUserByMobilephoneAndPwd" resultType="int" parameterType="User">
+        select count(*) from user where usermobilephone=#{usermobilephone} and userpassword=#{userpassword};
+    </select>
+<!--    用户信息修改-->
+    <select id="queryUserinfoByusername" resultType="User" parameterType="User">
+        select * from user where  username=#{username};
+    </select>
+    <update id="UpdateUserinfo" parameterType="User">
+        update user set usermobilephone=#{usermobilephone},userpassword=#{userpassword},useraddress=#{useraddress} where username=#{username};
+    </update>
+    <update id="UpdateUserinfoWithoutPwd" parameterType="User">
+        update user set usermobilephone=#{usermobilephone},useraddress=#{useraddress} where username=#{username};
+    </update>
+<!--    用户注册-->
+    <insert id="register" parameterType="User">
+        insert into user value (#{username},#{usermobilephone},#{userpassword},#{useraddress});
+    </insert>
+
+<!--    商品分页查询-->
+    <select id="queryGoodsByPage" resultType="apple" parameterType="Page">
+        select g_id,g_name,g_price,g_src from apple limit #{startId},#{pageSize};
+    </select>
+<!--    查询商品详细信息-->
+    <select id="queryGoodDetailsByg_id" resultType="apple" parameterType="apple">
+        select * from apple where g_id=#{g_id};
+    </select>
+<!--    添加购物车-->
+    <insert id="addToshoppingCart" parameterType="shoppingcart">
+        insert into shoppingcart value (#{id},#{uname},#{gname},#{gprice},#{count},#{total_price},#{gsrc},#{date});
+    </insert>
+<!--    根据用户名查询该用户的购物车信息-->
+    <select id="QueryShoppingCartByNameServlet" parameterType="shoppingcart" resultType="shoppingcart">
+        select * from shoppingcart where uname=#{uname};
+    </select>
+<!--    将商品移出购物车-->
+    <delete id="DeleteGoodsByGidAndUname" parameterType="shoppingcart">
+        delete from shoppingcart where uname=#{uname} and id=#{id} and count=#{count} and date=#{date};
+    </delete>
+</mapper>

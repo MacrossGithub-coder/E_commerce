@@ -1,0 +1,295 @@
+/*公共样式*/
+/* △解决网页右侧有大片空白方法 */
+/* 方法1：
+宽度超出body的元素被直接隐藏，且没有滚动条
+但没有滚动条会导致页面无法缩放，影响其他元素
+
+治标不治本，还是需要找到问题元素并调整布局
+body, html {
+    overflow-x: hidden;
+}  */
+/* 方法2：给每个元素加上边框且改变背景色，快速找到超出边界的元素（颜色醒目即可）并作出调整,
+以后布局有问题都可以用这个方法 */
+/* *{
+    outline: solid #f00 1px !important;
+    background: #000 !important;
+    color: green !important;
+} */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*版心*/
+
+.w {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.color-red {
+    color: #e33333;
+}
+
+
+/* 字体图标 */
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1848240 */
+    src: url(http://at.alicdn.com/t/font_1848240_2szxukonvma.eot);
+    src: url(http://at.alicdn.com/t/font_1848240_2szxukonvma.eot?#iefix) format('embedded-opentype'),
+        url(http://at.alicdn.com/t/font_1848240_2szxukonvma.woff2) format('woff2'),
+        url(http://at.alicdn.com/t/font_1848240_2szxukonvma.woff) format('woff'),
+        url(http://at.alicdn.com/t/font_1848240_2szxukonvma.ttf) format('truetype'),
+        url(http://at.alicdn.com/t/font_1848240_2szxukonvma.svg#iconfont) format('svg');
+}
+
+    .iconfont{
+        font-family:"iconfont" !important;
+        font-size:17px;font-style:normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;}
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?3a2xdr');
+    src: url('../fonts/icomoon.eot?3a2xdr#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?3a2xdr') format('truetype'), url('../fonts/icomoon.woff?3a2xdr') format('woff'), url('../fonts/icomoon.svg?3a2xdr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 顶部导航栏 《 */
+
+.top-nav {
+    width: 100%;
+    height: 31px;
+    background-color: #f1f1f1;
+    font-family: '宋体';
+    line-height: 31px;
+    color: #666666;
+    font-size: 12px
+}
+
+.top-nav li {
+    display: inline-block;
+}
+
+.top-nav .fr ul {
+    margin-top: -2px;
+}
+
+.top-nav .fr li:nth-child(2n) {
+    width: 1px;
+    height: 12px;
+    margin: 9px 10px 0;
+    background-color: #666666;
+    position: relative;
+    top: 2px;
+}
+
+.icon-down {
+    font-family: 'icomoon';
+    margin-left: 7px;
+}
+
+/* 顶部导航栏 》*/
+/* 头部 《*/
+
+.header {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.header .logo a{
+    display: inline-block;
+    width: 219px;
+    height: 55px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+}
+
+
+/* 搜索框 */
+
+.search {
+    position: absolute;
+    top: 4px;
+    left: 348px;
+    border: 2px solid #b1191a;
+}
+
+.search input {
+    width: 454px;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.search button {
+    height: 32px;
+    width: 80px;
+    background-color: #b1191a;
+    color: #fff;
+    font-weight: bold;
+    font-style: 16px;
+    font-family: '微软雅黑';
+}
+/* 我的购物车 */
+.header .shopbar {
+    width: 140px;
+    height: 36px;
+    background-color: #f7f7f7;
+    border: 1px solid #dfdfdf;
+    position: absolute;
+    right: 60px;
+    top: 4px;
+    text-align: center;
+    line-height: 36px;
+    font-family: "宋体";
+}
+.header .shopbar i:first-of-type {
+    display: inline-block;
+    background-image: url('../img/icons.png');
+    background-position: 147px 184px;
+    width: 23px;
+    height: 23px;
+   position: relative;
+   top: 4px;
+}
+.header .shopbar em {
+    font-family: 'icomoon';
+  
+}
+.header .shopbar .eight {
+    position: absolute;
+    top: -5px;
+    left: 105px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0;
+    /* 上右下有圆角边框，左无 */
+}
+/* 热词 */
+.hotwords {
+    width: 540px;
+    position: relative;
+    top: -11px;
+    left: 360px;
+}
+.hotwords li {
+    display: inline-block;
+    font: 12px '宋体';
+    margin-right: 15px;
+}
+/* 头部 》 */
+
+/* 底部《 */
+.footer {
+    padding-top: 30px;
+    height: 414px;
+    background-color: #f5f5f5;
+}
+/* 服务菜单 */
+.footer .ensure {
+    height: 107px;
+    border-bottom: 1px solid #ccc;
+   
+}
+.footer .ensure ul li {
+        display: inline-block;
+        height: 50px;
+        padding-left: 35px;
+    
+}
+.footer .ensure h3 {
+    font-family: '微软雅黑';
+    font-size: 14px;
+}
+.footer .ensure ul li p {
+    font-family: '宋体';
+}
+.footer .pic {
+    float: left;
+    width: 50px;
+    height: 50px;
+   background: url('../img/icons.png') no-repeat;
+    margin-right: 8px;
+}
+.footer .item1 {
+    background-position:  -252px -2px;
+}
+.footer .item2 {
+    background-position: -255px -54px;
+}
+.footer .item3 {
+    background-position: -256px -105px;
+}
+.footer .item4 {
+    background-position: -257px -156px;
+}
+.footer .item5 {
+    background-position: -256px -208px;
+}
+.footer .txt {
+    width: 202px;
+}
+/* 帮助菜单 */
+.footer .help {
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    color: #333333;
+}
+.footer .help dl {
+    display: inline-block;
+    margin-right: 50px;
+    padding-left: 67px;
+    vertical-align: top;
+    color: #333333;
+}
+.footer .help dl dt {
+    font: 16px bold;
+}
+.footer .help dl dd {
+    color: #333333;
+    font-family: '宋体';
+}
+.footer .help img {
+    width: 95px;
+    height: 95px;
+    margin-left: -10px;
+}
+/* copyright */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    line-height: 20px;
+}
+.copyright .aboutme ul li {
+   width:72px;
+    display: inline-block;
+    font-family: '宋体';
+}
+
+.copyright .aboutme {
+    margin-bottom: 15px;
+}
+.aboutme a {
+    margin: 0 3px;
+    font-family: '宋体';
+}
+.copyright p {
+    font-family: '宋体';
+}
+/* 》底部 */

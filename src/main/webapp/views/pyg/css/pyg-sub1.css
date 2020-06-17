@@ -1,0 +1,61 @@
+.logo+span{
+    content: "";
+    background-image: url(../images/02-电商-分类列表页_03.jpg);
+    width: 87px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 199px;
+    top: 25px;
+}
+.external-logo{
+    width: 300px;
+}
+.rnp:nth-last-child(1){
+    position: relative;
+}
+.rnp:nth-last-child(1)>b{
+    right: 3px;
+    top: 12px;
+}
+.left-rnp{
+    margin-left: -17px;
+    display: block;
+    height: 45px;
+    padding: 0 20px;
+    line-height: 45px;
+    font-size: 16px;
+    font-weight: 900;
+}
+.rnp{
+    font-size: 14px;
+}
+.fire-shopping{
+    height: 1900px;
+}
+.external-fs{
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 290px;
+    height: 416px;
+    /* background-color: gray; */
+}
+.bottom-efs{
+    height: 35px;
+    width: 290px;
+    background-color: rgb(182, 18, 18);
+    color: aliceblue;
+    text-align: center;
+    line-height: 35px;
+    font-size: 17px;
+}
+.external-fs>a>p{
+    color: red;
+    margin: 5px;
+}
+.external-fs>a>p>s{
+    color: gray;
+}
+.span-white{
+    height: 350px;
+}

@@ -1,0 +1,116 @@
+.crsp12{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: 2px -1px;
+}
+.crsp13{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -60px -1px;
+}
+.crsp14{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -121px -1px;
+}
+.crsp15{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -188px -1px;
+}
+.crsp16{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: 2px -73px;
+}
+.crsp17{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -60px -73px;
+}
+.crsp18{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -121px -73px;
+}
+.crsp19{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -188px -73px;
+}
+.crsp20{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: 2px -144px;
+}
+.crsp21{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -60px -144px;
+}
+.crsp22{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -121px -144px;
+}
+.crsp23{
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    background: url(../jpg/icons.png);
+    background-position: -188px -144px;
+}
+.crsp12>span,
+.crsp13>span,
+.crsp15>span,
+.crsp16>span,
+.crsp18>span,
+.crsp20>span,
+.crsp21>span,
+.crsp23>span{
+    position: absolute;
+    top: 42px;
+    left: 18px;
+}
+.crsp14>span{
+    position: absolute;
+    top:42px;
+    left: 16px;
+}
+.crsp19>span{
+    position: absolute;
+    top:42px;
+    left: 16px;
+}
+.crsp22>span{
+    position: absolute;
+    top:42px;
+    left: 16px;
+}
+.crsp17>span{
+    position: absolute;
+    top:42px;
+    left: 16px;
+}
